@@ -45,7 +45,7 @@ server/
 Install Git, Node.js 22.13 or newer (the repository `.nvmrc` is `22`), and MongoDB 7 or 8. A Google Cloud Translation API key is required only when someone translates a message, and when the development seed writes its chat. SMTP is required only for password-reset email.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Geek-MJ/NestMates.git
 cd NestMates
 ```
 
@@ -86,7 +86,7 @@ SMTP is optional. `SMTP_HOST`, `SMTP_USER`, `SMTP_PASSWORD` and `MAIL_FROM` are 
 
 ## Running the Application
 
-Start MongoDB, then start the API:
+Start MongoDB so it accepts connections on the host and port in `MONGODB_URI`. A normal local install listens on port 27017; the database name in that URI is created when the API first connects. Then start the API:
 
 ```bash
 cd server
