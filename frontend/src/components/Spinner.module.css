@@ -1,0 +1,25 @@
+.wrapper {
+  display: inline-flex;
+}
+
+.spinner {
+  flex: none;
+  animation: nm-spin 0.9s linear infinite;
+}
+
+.track,
+.arc {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.25;
+}
+
+.track {
+  opacity: 0.18;
+}
+
+.arc {
+  stroke-linecap: round;
+  stroke-dasharray: 56.5;
+  stroke-dashoffset: 40;
+}

@@ -1,0 +1,84 @@
+.intro {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.iconBadge {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-lg);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.iconBadgeSuccess {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.consentNote {
+  margin-top: calc(-1 * var(--space-2));
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.consentNote a {
+  font-weight: var(--weight-semibold);
+}
+
+.inlineLink {
+  justify-self: end;
+  margin-top: calc(-1 * var(--space-2));
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+}
+
+.inlineLink:hover {
+  text-decoration: underline;
+}
+
+.submit {
+  margin-top: var(--space-2);
+}
+
+.footer {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.footer a {
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}

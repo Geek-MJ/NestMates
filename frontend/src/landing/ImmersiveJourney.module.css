@@ -1,0 +1,230 @@
+/*
+ * Desktop journey. Scroll-driven values come from useJourneyScroll as CSS variables on
+ * .journey (--lp-*, --vis-*, --open, --door, --walk, --focus, --S, --progress); pointer
+ * values (--mx, --my, --px, --py) from usePointerField. Defaults keep the first frame right.
+ */
+
+.journey {
+  --vis-arrival: 1;
+  --lp-arrival: 0.5;
+
+  position: relative;
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--world-sky-bottom);
+}
+
+.sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--world-sky-top) 0%, var(--world-sky-bottom) 70%);
+}
+
+.world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1600px;
+  height: 1000px;
+  transform-origin: 0 0;
+}
+
+.world > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.backdrop {
+  translate: calc(var(--px, 0) * -12px) calc(var(--py, 0) * -6px);
+  transition: translate 900ms var(--ease-out);
+}
+
+.foreground {
+  translate: calc(var(--px, 0) * 22px) calc(var(--py, 0) * 12px);
+  transition: translate 700ms var(--ease-out);
+}
+
+.facade {
+  --hole: calc(var(--open, 0) * 112% - 3%);
+
+  -webkit-mask-image: radial-gradient(circle farthest-corner at 50% 80.5%, transparent var(--hole), #000 calc(var(--hole) + 1.5%));
+  mask-image: radial-gradient(circle farthest-corner at 50% 80.5%, transparent var(--hole), #000 calc(var(--hole) + 1.5%));
+  opacity: calc(1 - clamp(0, (var(--open, 0) - 0.9) * 10, 1));
+}
+
+.focusShade,
+.ambient,
+.scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.focusShade {
+  background: radial-gradient(ellipse 34% 46% at 47% 50%, transparent 35%, rgb(46 40 36 / 0.3) 100%);
+  opacity: calc(var(--focus, 0) * 0.85);
+}
+
+.ambient {
+  background: radial-gradient(520px circle at var(--mx, 70%) var(--my, 35%), rgb(255 240 214 / 0.28), transparent 70%);
+}
+
+.scrim {
+  background: linear-gradient(
+    90deg,
+    rgb(247 244 239 / 0.95) 0%,
+    rgb(247 244 239 / 0.86) 24%,
+    rgb(247 244 239 / 0.4) 38%,
+    rgb(247 244 239 / 0) 50%
+  );
+}
+
+/* Chapters: real content, scrolling normally over the stage. */
+
+.chapters {
+  position: relative;
+  z-index: 2;
+  margin-top: -100vh;
+  pointer-events: none;
+}
+
+.chapter {
+  display: flex;
+  align-items: center;
+  min-height: calc(var(--length) * 1vh);
+  padding: 112px max(48px, 6vw) 96px;
+}
+
+.chapterText {
+  width: min(30rem, 36vw);
+  opacity: var(--vis);
+  translate: 0 calc((1 - var(--vis)) * 28px);
+  pointer-events: auto;
+}
+
+.chapterText :is(h1, h2) {
+  scroll-margin-top: 50vh;
+}
+
+/* The highlighted object sits just right of the copy, so long (French) titles must stay compact. */
+.chapter:has(.cardSlot) .chapterText {
+  width: min(22.5rem, 25vw);
+}
+
+.chapter:has(.cardSlot) .chapterText h2 {
+  font-size: clamp(2rem, 0.9rem + 2.5vw, 3rem);
+  text-wrap: balance;
+}
+
+/* Feature chapter, shown beside the room it lives in. */
+
+.cardSlot {
+  --step: clamp(0, (var(--lp) - 0.16) * 2.2, 1);
+
+  position: fixed;
+  top: 50%;
+  left: 57%;
+  z-index: 3;
+  width: clamp(320px, 26vw, 370px);
+  opacity: var(--vis);
+  translate: calc((1 - var(--vis)) * 64px) calc(-50% + (0.5 - var(--lp)) * 80px);
+  transform: perspective(1200px) rotateY(calc((1 - var(--vis)) * -18deg));
+  pointer-events: none;
+}
+
+.tilt {
+  border-radius: var(--radius-lg);
+}
+
+.card {
+  width: 100%;
+}
+
+.journey[data-scene="expenses"] [data-card="expenses"] .tilt,
+.journey[data-scene="calendar"] [data-card="calendar"] .tilt,
+.journey[data-scene="documents"] [data-card="documents"] .tilt,
+.journey[data-scene="tasks"] [data-card="tasks"] .tilt,
+.journey[data-scene="chat"] [data-card="chat"] .tilt {
+  pointer-events: auto;
+}
+
+/* Chapter rail and progress. */
+
+.rail {
+  position: absolute;
+  top: 50%;
+  right: var(--space-6);
+  z-index: 4;
+  translate: 0 -50%;
+}
+
+.rail ol {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.railLink {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  min-height: 24px;
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-full);
+  color: var(--color-text);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+}
+
+.railLabel {
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  translate: 6px 0;
+  transition:
+    opacity var(--duration-base) var(--ease-out),
+    translate var(--duration-base) var(--ease-out);
+}
+
+.railLink:hover .railLabel,
+.railLink:focus-visible .railLabel {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.railMark {
+  width: 4px;
+  height: calc(8px + var(--v) * 18px);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--color-accent) calc(var(--v) * 100%), var(--color-border-strong));
+}
+
+.railLink:hover .railMark {
+  background: var(--color-accent);
+}
+
+.progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 3px;
+  background: var(--color-accent);
+  transform-origin: 0 50%;
+  scale: var(--progress, 0) 1;
+}

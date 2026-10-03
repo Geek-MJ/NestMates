@@ -1,0 +1,171 @@
+.page {
+  display: grid;
+  min-height: 100dvh;
+  transition: --door 1.1s var(--ease-out);
+}
+
+.panel {
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+}
+
+.headerBrand,
+.brandLink {
+  border-radius: var(--radius-sm);
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Small screens: the front of the home above the card, which overlaps it like an open door. */
+.banner {
+  height: 150px;
+  margin: 0 var(--space-4);
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, var(--world-sky-top), var(--world-sky-bottom));
+}
+
+.bannerScene {
+  width: 100%;
+  height: 100%;
+}
+
+.doorLight {
+  opacity: calc(var(--door) * 0.9);
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: -24px;
+  padding: 0 var(--space-4) var(--space-12);
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  padding: var(--space-8) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow:
+    0 1px 0 rgb(255 255 255 / 0.8) inset,
+    0 2px 6px rgb(31 27 23 / 0.04),
+    0 30px 60px -32px rgb(31 27 23 / 0.35);
+  animation: nm-fade-up var(--duration-slow) var(--ease-out) both;
+  view-transition-name: nm-page;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 var(--space-8) auto;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: linear-gradient(90deg, transparent, var(--world-terracotta), var(--color-accent), transparent);
+  opacity: 0.55;
+}
+
+@media (min-width: 600px) {
+  .banner {
+    height: 200px;
+    margin-inline: var(--space-6);
+  }
+
+  .main {
+    margin-top: -32px;
+  }
+
+  .card {
+    padding: var(--space-10);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    grid-template-columns: minmax(400px, 5fr) 7fr;
+  }
+
+  .panel {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    height: 100dvh;
+    padding: var(--space-10) var(--space-12) var(--space-12);
+    overflow: hidden;
+    border-right: 1px solid var(--color-border);
+    background:
+      radial-gradient(70% 50% at 50% 72%, rgb(247 217 168 / calc(0.15 + var(--door) * 0.35)) 0%, transparent 70%),
+      linear-gradient(180deg, var(--world-sky-top) 0%, var(--world-sky-bottom) 75%, var(--world-ground) 100%);
+  }
+
+  .doorway {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 0;
+    margin-inline: calc(var(--space-12) * -1);
+  }
+
+  .doorwayScene {
+    width: 100%;
+    height: 100%;
+    max-height: 520px;
+  }
+
+  .panelText {
+    display: grid;
+    gap: var(--space-3);
+    max-width: 28rem;
+    padding-top: var(--space-6);
+    animation: nm-fade-up var(--duration-slow) var(--ease-out) 60ms both;
+  }
+
+  .tagline {
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    text-wrap: balance;
+  }
+
+  .pitch {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+  }
+
+  .header {
+    justify-content: flex-end;
+    padding: var(--space-6) var(--space-10);
+  }
+
+  .headerBrand,
+  .banner {
+    display: none;
+  }
+
+  .main {
+    align-items: center;
+    margin-top: 0;
+    padding-top: var(--space-4);
+  }
+}

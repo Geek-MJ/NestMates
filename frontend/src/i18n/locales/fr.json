@@ -1,0 +1,544 @@
+{
+  "app": {
+    "name": "NestMates",
+    "tagline": "La colocation, simplement organisée.",
+    "pitch": "Dépenses, tâches, événements, documents et discussions — un seul endroit apaisé pour toute la colocation, en français et en anglais."
+  },
+  "a11y": {
+    "skipToContent": "Aller au contenu principal",
+    "loading": "Chargement…",
+    "close": "Fermer",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "opensNewTab": "s’ouvre dans un nouvel onglet"
+  },
+  "language": {
+    "label": "Langue",
+    "names": {
+      "fr": "Français",
+      "en": "English"
+    }
+  },
+  "nav": {
+    "primary": "Navigation principale",
+    "account": "Compte",
+    "expenses": "Dépenses",
+    "calendar": "Calendrier",
+    "documents": "Documents",
+    "tasks": "Liste de tâches",
+    "tasksShort": "Tâches",
+    "chat": "Discussion",
+    "household": "Colocation",
+    "profile": "Profil",
+    "onboarding": "Commencer",
+    "logout": "Se déconnecter"
+  },
+  "common": {
+    "retry": "Réessayer",
+    "backToHome": "Retour à NestMates",
+    "reload": "Recharger la page",
+    "cancel": "Annuler",
+    "formerMember": "Ancien membre",
+    "loadMore": "Charger la suite"
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire.",
+    "email": "Saisissez une adresse e-mail valide, par exemple nom@exemple.fr.",
+    "passwordRules": "Utilisez au moins 8 caractères, dont au moins une lettre et un chiffre.",
+    "privacyRequired": "Acceptez la politique de confidentialité pour créer votre compte.",
+    "invitationCode": "Un code d’invitation comporte exactement 8 lettres ou chiffres.",
+    "codes": {
+      "REQUIRED": "Ce champ est obligatoire.",
+      "INVALID_TYPE": "Cette valeur n’est pas valide.",
+      "TOO_LONG": "C’est trop long.",
+      "INVALID_FORMAT": "Cette valeur n’a pas le format attendu.",
+      "NOT_POSITIVE": "Saisissez un montant supérieur à zéro, avec au plus deux décimales.",
+      "OUT_OF_RANGE": "Ce montant est trop élevé.",
+      "NOT_MEMBER": "Choisissez une personne qui fait actuellement partie de la colocation.",
+      "DUPLICATE": "Chaque personne ne peut être choisie qu’une fois."
+    }
+  },
+  "errors": {
+    "NETWORK_ERROR": "Impossible de joindre NestMates. Vérifiez votre connexion internet et réessayez.",
+    "TIMEOUT": "NestMates a mis trop de temps à répondre. Veuillez réessayer.",
+    "SERVICE_UNAVAILABLE": "NestMates est momentanément inaccessible. Réessayez dans quelques instants.",
+    "VALIDATION_ERROR": "Certaines informations sont invalides. Vérifiez les champs et réessayez.",
+    "UNAUTHENTICATED": "Votre session a expiré. Veuillez vous reconnecter.",
+    "FORBIDDEN": "Vous n’avez pas accès à cette colocation.",
+    "NOT_FOUND": "Nous n’avons pas trouvé ce que vous cherchez.",
+    "CONFLICT": "Cette action n’est pas possible pour le moment. Actualisez la page et réessayez.",
+    "RATE_LIMITED": "Trop de tentatives. Patientez quelques minutes avant de réessayer.",
+    "PAYLOAD_TOO_LARGE": "Cette requête est trop volumineuse pour être envoyée.",
+    "UNSUPPORTED_MEDIA_TYPE": "Ce type de fichier n’est pas accepté. Utilisez un PDF, un JPEG ou un PNG.",
+    "INTERNAL_ERROR": "Un problème est survenu de notre côté. Réessayez dans un instant.",
+    "UNKNOWN": "Une erreur inattendue s’est produite. Veuillez réessayer."
+  },
+  "session": {
+    "restoring": "Ouverture de votre espace…",
+    "errorTitle": "Impossible d’ouvrir votre session",
+    "logout": "Se déconnecter"
+  },
+  "auth": {
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre colocation.",
+      "submit": "Se connecter",
+      "forgotPassword": "Mot de passe oublié ?",
+      "noAccount": "Nouveau sur NestMates ?",
+      "createAccount": "Créer un compte",
+      "invalidCredentials": "L’adresse e-mail ou le mot de passe est incorrect. Vérifiez-les et réessayez.",
+      "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter."
+    },
+    "register": {
+      "title": "Créez votre compte",
+      "subtitle": "Votre espace est prêt en moins d’une minute.",
+      "name": "Nom",
+      "passwordHint": "Au moins 8 caractères, dont une lettre et un chiffre.",
+      "acceptPrivacy": "J’ai lu et j’accepte la politique de confidentialité, y compris la traduction automatique des messages de discussion par Google Cloud Translation.",
+      "googleTermsLead": "La traduction automatique est fournie par Google Cloud Translation.",
+      "googleTermsLink": "Conditions d’utilisation de Google",
+      "submit": "Créer mon compte",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "login": "Se connecter",
+      "emailTaken": "Un compte utilise déjà cette adresse e-mail. Connectez-vous ou utilisez une autre adresse."
+    },
+    "forgot": {
+      "title": "Réinitialiser votre mot de passe",
+      "subtitle": "Saisissez votre adresse e-mail : nous vous enverrons un lien pour choisir un nouveau mot de passe.",
+      "submit": "Envoyer le lien",
+      "sentTitle": "Consultez votre boîte de réception",
+      "sentMessage": "Si un compte existe pour {{email}}, nous avons envoyé un lien de réinitialisation. Il reste valable 1 heure.",
+      "backToLogin": "Retour à la connexion"
+    },
+    "reset": {
+      "title": "Choisissez un nouveau mot de passe",
+      "subtitle": "Votre nouveau mot de passe remplace l’ancien immédiatement.",
+      "newPassword": "Nouveau mot de passe",
+      "submit": "Mettre à jour le mot de passe",
+      "successTitle": "Mot de passe mis à jour",
+      "successMessage": "Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.",
+      "goToLogin": "Aller à la connexion",
+      "missingTokenTitle": "Ce lien est incomplet",
+      "missingTokenMessage": "Ouvrez à nouveau le lien reçu par e-mail, ou demandez-en un nouveau.",
+      "requestNewLink": "Demander un nouveau lien"
+    }
+  },
+  "onboarding": {
+    "title": "Configurez votre colocation",
+    "subtitle": "Créez une colocation pour votre appartement, ou rejoignez vos colocataires avec leur code d’invitation.",
+    "create": {
+      "title": "Créer une colocation",
+      "description": "Vous obtiendrez un code d’invitation à partager avec vos colocataires.",
+      "name": "Nom de la colocation",
+      "submit": "Créer la colocation",
+      "alreadyMember": "Vous faites déjà partie d’une colocation."
+    },
+    "join": {
+      "title": "Rejoindre une colocation",
+      "description": "Demandez à un colocataire le code de 8 caractères affiché dans les paramètres de la colocation.",
+      "code": "Code d’invitation",
+      "submit": "Rejoindre la colocation",
+      "invalidCode": "Ce code d’invitation ne correspond à aucune colocation. Vérifiez-le et réessayez.",
+      "alreadyMember": "Vous faites déjà partie d’une colocation. Quittez-la avant d’en rejoindre une autre."
+    }
+  },
+  "pages": {
+    "expenses": {
+      "title": "Dépenses",
+      "description": "Qui a payé quoi, et qui doit combien à qui."
+    },
+    "calendar": {
+      "title": "Calendrier",
+      "description": "Invités, réparations, soirées et échéances pour toute la colocation."
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Bail, factures, état des lieux et assurance, au même endroit."
+    },
+    "tasks": {
+      "title": "Liste de tâches",
+      "description": "Les tâches de la colocation, à qui elles sont attribuées et pour quand."
+    },
+    "chat": {
+      "title": "Discussion",
+      "description": "Échangez avec vos colocataires — chaque message dans votre langue."
+    },
+    "household": {
+      "title": "Colocation",
+      "description": "Membres, code d’invitation et départ de la colocation."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Votre nom, votre e-mail, votre mot de passe et votre langue."
+    }
+  },
+  "householdSettings": {
+    "loading": "Ouverture de la colocation…",
+    "errorTitle": "La colocation n’a pas pu être ouverte",
+    "nameLabel": "Nom de la colocation",
+    "empty": {
+      "title": "Vous n’appartenez à aucune colocation",
+      "description": "Créez une colocation pour votre logement, ou rejoignez celle de vos colocataires avec leur code d’invitation."
+    },
+    "invitation": {
+      "label": "Code d’invitation",
+      "copy": "Copier",
+      "copied": "Copié",
+      "copyFailed": "La copie a échoué",
+      "hint": "Partagez ce code avec vos colocataires."
+    },
+    "members": {
+      "title": "Membres de la colocation",
+      "you": "Vous",
+      "empty": "Cette colocation n’a aucun membre."
+    },
+    "leave": {
+      "title": "Quitter la colocation",
+      "action": "Quitter la colocation",
+      "hint": "Vous pouvez partir lorsque votre solde est réglé : vous ne devez rien, et personne ne vous doit rien.",
+      "blocked": "Ces montants doivent encore être réglés avant que vous puissiez partir.",
+      "debt": "{{from}} doit {{amount}} à {{to}}",
+      "confirmTitle": "Quitter cette colocation ?",
+      "confirmBody": "Vous n’aurez plus accès à ses dépenses, à son calendrier, à ses documents, à ses tâches et à son chat. Si vous êtes le dernier membre, la colocation et toutes ses données sont supprimées."
+    }
+  },
+  "profileSettings": {
+    "details": {
+      "title": "Vos informations",
+      "submit": "Enregistrer",
+      "success": "Profil mis à jour",
+      "emailTaken": "Un compte utilise déjà cette adresse e-mail."
+    },
+    "language": {
+      "title": "Langue",
+      "description": "Ce choix s’applique immédiatement à toute l’application et il est enregistré sur votre compte.",
+      "success": "Langue mise à jour"
+    },
+    "password": {
+      "title": "Mot de passe",
+      "current": "Mot de passe actuel",
+      "submit": "Mettre à jour le mot de passe",
+      "success": "Mot de passe mis à jour",
+      "incorrect": "Le mot de passe actuel est incorrect."
+    },
+    "delete": {
+      "title": "Supprimer le compte",
+      "description": "Cette action supprime définitivement votre compte et vos données personnelles.",
+      "action": "Supprimer mon compte",
+      "confirmTitle": "Supprimer votre compte ?",
+      "confirmBody": "Votre compte et vos données personnelles seront supprimés. Cette action est définitive.",
+      "confirm": "Supprimer mon compte",
+      "cancel": "Annuler",
+      "inHousehold": "Vous ne pouvez supprimer votre compte qu’après avoir quitté votre colocation. Ouvrez les réglages de la colocation et partez une fois votre solde réglé."
+    }
+  },
+  "expensesPage": {
+    "loading": "Ouverture des dépenses…",
+    "errorTitle": "Les dépenses n’ont pas pu être ouvertes",
+    "add": {
+      "open": "Ajouter une dépense",
+      "title": "Ajouter une dépense",
+      "description": "Le montant est partagé à parts égales entre les personnes choisies.",
+      "amount": "Montant",
+      "amountHint": "En euros, par exemple 12,50.",
+      "payer": "Payé par",
+      "date": "Date",
+      "category": "Catégorie",
+      "descriptionLabel": "Description",
+      "participants": "Participants",
+      "submit": "Enregistrer la dépense",
+      "success": "Dépense enregistrée. Les soldes sont à jour."
+    },
+    "categories": {
+      "rent": "Loyer",
+      "groceries": "Courses",
+      "bills": "Factures",
+      "household": "Maison",
+      "transport": "Transport",
+      "leisure": "Loisirs",
+      "other": "Autre"
+    },
+    "balances": {
+      "title": "Soldes",
+      "empty": "Il n’y a pas encore de solde.",
+      "hint": "Un solde positif est une somme que la colocation doit à cette personne. Un solde négatif est une somme qu’elle doit."
+    },
+    "debts": {
+      "title": "Qui doit quoi à qui",
+      "empty": "Personne ne doit rien pour le moment.",
+      "line": "{{from}} doit {{amount}} à {{to}}"
+    },
+    "settle": {
+      "action": "Marquer comme réglé",
+      "success": "Remboursement enregistré. Les soldes sont à jour.",
+      "confirmTitle": "Marquer cette dette comme réglée ?",
+      "confirmBody": "{{from}} verse à {{to}} la totalité de {{amount}} en dehors de NestMates. Cela enregistre que la dette est réglée."
+    },
+    "history": {
+      "title": "Historique",
+      "expenses": "Dépenses",
+      "settlements": "Remboursements",
+      "empty": "Aucune dépense ni aucun remboursement pour le moment.",
+      "noExpenses": "Aucune dépense sur cette page.",
+      "noSettlements": "Aucun remboursement sur cette page.",
+      "paidBy": "Payé par {{name}} · {{date}}",
+      "settledLine": "{{from}} a réglé avec {{to}}"
+    }
+  },
+  "calendarPage": {
+    "loading": "Ouverture du calendrier…",
+    "errorTitle": "Le calendrier n’a pas pu être ouvert",
+    "month": "Mois",
+    "empty": "Rien n’est prévu ce mois-ci.",
+    "add": "Ajouter un événement",
+    "addTitle": "Ajouter un événement",
+    "edit": "Modifier",
+    "editTitle": "Modifier l’événement",
+    "save": "Enregistrer l’événement",
+    "delete": "Supprimer l’événement",
+    "deleteTitle": "Supprimer cet événement ?",
+    "deleteBody": "L’événement disparaîtra pour tous les membres de la colocation.",
+    "created": "Événement ajouté.",
+    "updated": "Événement mis à jour.",
+    "deleted": "Événement supprimé.",
+    "fields": {
+      "title": "Titre",
+      "date": "Date",
+      "time": "Heure",
+      "timeHint": "Facultatif.",
+      "description": "Description"
+    }
+  },
+  "documentsPage": {
+    "loading": "Ouverture des documents…",
+    "errorTitle": "Les documents n’ont pas pu être ouverts",
+    "upload": "Importer",
+    "hint": "PDF, JPEG ou PNG, jusqu’à 10 Mo.",
+    "uploaded": "Document importé.",
+    "tooLarge": "Ce fichier dépasse 10 Mo.",
+    "unsupported": "Utilisez un fichier PDF, JPEG ou PNG.",
+    "popupBlocked": "Le navigateur a bloqué le nouvel onglet. Autorisez les fenêtres pour NestMates, ou téléchargez le fichier.",
+    "deleted": "Document supprimé.",
+    "emptyTitle": "Aucun document pour le moment",
+    "empty": "Importez le bail, une facture ou un autre fichier utile à la colocation.",
+    "listTitle": "Documents de la colocation",
+    "view": "Voir",
+    "download": "Télécharger",
+    "delete": "Supprimer",
+    "deleteTitle": "Supprimer ce document ?",
+    "deleteBody": "{{name}} sera retiré pour tous les membres de la colocation.",
+    "types": {
+      "pdf": "PDF",
+      "jpeg": "JPEG",
+      "png": "PNG",
+      "other": "Fichier"
+    }
+  },
+  "tasksPage": {
+    "loading": "Ouverture de la liste de tâches…",
+    "errorTitle": "La liste de tâches n’a pas pu être ouverte",
+    "add": "Ajouter une tâche",
+    "addTitle": "Ajouter une tâche",
+    "submit": "Enregistrer la tâche",
+    "created": "Tâche ajoutée.",
+    "completed": "Tâche marquée comme faite.",
+    "emptyTitle": "Aucune tâche pour le moment",
+    "empty": "Ajoutez une tâche, choisissez qui s’en charge et une date d’échéance.",
+    "listTitle": "Tâches de la colocation",
+    "meta": "{{assignee}} · échéance {{date}} · {{status}}",
+    "status": {
+      "TODO": "À faire",
+      "DONE": "Fait"
+    },
+    "fields": {
+      "title": "Titre",
+      "assignee": "Assignée à",
+      "dueDate": "Date d’échéance"
+    }
+  },
+  "chatPage": {
+    "loading": "Ouverture du chat…",
+    "errorTitle": "Le chat n’a pas pu être ouvert",
+    "history": "Messages",
+    "empty": "Aucun message pour le moment. Dites bonjour à vos colocataires.",
+    "loadOlder": "Charger les messages plus anciens",
+    "messageLabel": "Message",
+    "placeholder": "Écrire un message",
+    "send": "Envoyer",
+    "translateTo": {
+      "fr": "Traduire en français",
+      "en": "Traduire en anglais"
+    },
+    "seeOriginal": "Voir l’original",
+    "translating": "Traduction en cours…",
+    "translationUnavailable": "Traduction indisponible. Veuillez réessayer.",
+    "retry": "Réessayer",
+    "typing": "{{name}} est en train d’écrire…",
+    "rateLimit": "Vous envoyez des messages trop vite. Attendez quelques secondes et réessayez."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "message": "Cette page n’existe pas ou a été déplacée."
+  },
+  "routeError": {
+    "title": "Un problème est survenu",
+    "message": "Une erreur inattendue a empêché le chargement de cette page. Rechargez la page pour réessayer."
+  },
+  "landing": {
+    "title": "Vivre ensemble, en plus simple",
+    "chapters": "Chapitres de la visite",
+    "header": {
+      "label": "Compte",
+      "login": "Se connecter",
+      "getStarted": "Commencer"
+    },
+    "footer": {
+      "label": "Liens du pied de page",
+      "tagline": "Dépenses partagées, calendrier, documents, tâches et discussion pour les personnes avec qui vous vivez — en français et en anglais.",
+      "login": "Se connecter",
+      "register": "Créer un compte"
+    },
+    "scenes": {
+      "arrival": {
+        "label": "Bienvenue",
+        "tagline": "Vivre ensemble, en plus simple.",
+        "lead": "Dépenses partagées, calendrier commun, documents importants, tâches et une discussion du foyer traduite entre le français et l’anglais — au même endroit, en toute sérénité.",
+        "cta": "Commencer",
+        "explore": "Découvrir"
+      },
+      "enter": {
+        "label": "La maison",
+        "title": "Un seul foyer. Des vies différentes.",
+        "body": "Tout ce dont votre foyer a besoin, au même endroit."
+      },
+      "people": {
+        "label": "Les habitants",
+        "title": "Chacun a sa propre vie.",
+        "body": "NestMates garde le foyer connecté.",
+        "roles": {
+          "cooking": "En cuisine",
+          "working": "Au travail",
+          "relaxing": "En pause",
+          "groceries": "Retour des courses"
+        }
+      },
+      "expenses": {
+        "label": "Dépenses",
+        "kicker": "Dépenses partagées",
+        "title": "Savoir qui a payé. Savoir ce qui est partagé.",
+        "body": "Restez simple : enregistrez une dépense, NestMates calcule la part de chacun, puis vous équilibrez les comptes."
+      },
+      "calendar": {
+        "label": "Calendrier",
+        "kicker": "Calendrier partagé",
+        "title": "Savoir ce qui se passe.",
+        "body": "Dîners, visites et projets du foyer dans un seul calendrier visible par tous."
+      },
+      "documents": {
+        "label": "Documents",
+        "kicker": "Documents",
+        "title": "Rangez l’essentiel là où chacun peut le trouver.",
+        "body": "Le bail, l’assurance et les papiers du foyer, réunis pour toute la maison."
+      },
+      "tasks": {
+        "label": "Tâches",
+        "kicker": "Liste de tâches",
+        "title": "Partagez les responsabilités.",
+        "body": "Ajoutez des tâches, prenez-les en charge et cochez-les. Chacun voit ce qu’il reste à faire."
+      },
+      "chat": {
+        "label": "Discussion",
+        "kicker": "Discussion du foyer",
+        "title": "Écrivez dans votre langue. Tout le monde suit.",
+        "body": "Les messages peuvent être traduits entre le français et l’anglais, et l’original reste toujours à côté.",
+        "pair": "Français ↔ Anglais"
+      },
+      "final": {
+        "label": "Ensemble",
+        "tagline": "Un seul foyer. Tout est synchronisé.",
+        "body": "Créez votre foyer et invitez les personnes avec qui vous vivez, ou rejoignez-en un avec un code d’invitation.",
+        "create": "Créer votre foyer",
+        "join": "Rejoindre un foyer",
+        "joinHint": "Vous avez un code d’invitation ? Créez d’abord votre compte, puis saisissez le code.",
+        "login": "Vous avez déjà un compte ? Se connecter"
+      }
+    },
+    "illustrations": {
+      "expenses": {
+        "title": "Dépenses partagées",
+        "caption": "Une dépense est enregistrée, partagée à parts égales entre trois personnes, puis réglée.",
+        "steps": {
+          "record": "Enregistrer",
+          "calculate": "Calculer",
+          "settle": "Régler"
+        },
+        "item": "Courses",
+        "paidBy": "Payé par une personne du foyer",
+        "split": "Partagé entre {{count}} personnes",
+        "settled": "Réglé"
+      },
+      "calendar": {
+        "title": "Calendrier",
+        "caption": "Un jour est sélectionné dans le calendrier du foyer et son événement s’affiche.",
+        "event": "Dîner du foyer",
+        "place": "Cuisine"
+      },
+      "documents": {
+        "title": "Documents",
+        "caption": "Le bail, l’assurance et les documents du foyer sont rangés côte à côte.",
+        "lease": "Bail",
+        "insurance": "Assurance",
+        "household": "Foyer",
+        "type": "PDF",
+        "shared": "Partagé avec le foyer"
+      },
+      "tasks": {
+        "title": "Liste de tâches",
+        "caption": "Une tâche passe de « À faire » à « Terminé » et est cochée.",
+        "todo": "À faire",
+        "done": "Terminé",
+        "items": {
+          "kitchen": "Nettoyer la cuisine",
+          "recycling": "Sortir le recyclage",
+          "laundry": "Plier le linge",
+          "plants": "Arroser les plantes"
+        }
+      },
+      "chat": {
+        "title": "Discussion du foyer",
+        "caption": "Un message écrit en anglais s’affiche avec sa traduction française, et une réponse écrite en français avec sa traduction anglaise.",
+        "languages": "FR ↔ EN",
+        "question": "Quelqu’un peut acheter du lait ?",
+        "reply": "Oui, je m’en occupe !",
+        "translatedFrom": {
+          "en": "Traduit de l’anglais",
+          "fr": "Traduit du français"
+        }
+      }
+    }
+  },
+  "authScene": {
+    "login": {
+      "title": "Bon retour.",
+      "body": "La porte est ouverte. Connectez-vous pour retrouver votre foyer."
+    },
+    "register": {
+      "title": "Votre nouveau foyer commence ici.",
+      "body": "Créez votre compte, puis configurez votre foyer ou rejoignez-en un avec un code d’invitation."
+    },
+    "forgot": {
+      "title": "Clé perdue ?",
+      "body": "Ça arrive. Nous vous enverrons un lien par e-mail pour revenir."
+    },
+    "reset": {
+      "title": "Une nouvelle clé pour votre foyer.",
+      "body": "Choisissez un nouveau mot de passe pour déverrouiller votre compte."
+    }
+  },
+  "onboardingHero": {
+    "eyebrow": "Bienvenue chez vous",
+    "or": "ou"
+  }
+}

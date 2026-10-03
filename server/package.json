@@ -1,0 +1,37 @@
+{
+  "name": "nestmates-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "NestMates REST API and Socket.IO server",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "lint": "eslint .",
+    "seed:dev": "NODE_ENV=development node --env-file=.env src/seed/devSeed.js",
+    "test": "node --env-file-if-exists=.env.test --test --test-concurrency=1 \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "@google-cloud/translate": "^10.1.1",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.4",
+    "morgan": "^1.12.1",
+    "multer": "^2.4.0",
+    "nodemailer": "^10.0.14",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "globals": "^17.13.0",
+    "socket.io-client": "^4.8.4"
+  }
+}

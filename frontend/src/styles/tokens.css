@@ -1,0 +1,101 @@
+:root {
+  color-scheme: light;
+
+  /* Warm neutrals */
+  --color-bg: #f7f4ef;
+  --color-surface: #fffdfa;
+  --color-surface-sunken: #f1ede6;
+  --color-surface-hover: #f3efe9;
+  --color-border: #e6e0d6;
+  --color-border-strong: #d4ccbf;
+  --color-text: #1f1b17;
+  --color-text-muted: #6b6259;
+  --color-text-inverse: #fffdfa;
+
+  /* Accent: a softened NestMates crimson */
+  --color-accent: #9e1f45;
+  --color-accent-hover: #861838;
+  --color-accent-active: #721432;
+  --color-accent-soft: #f5e7eb;
+  --color-accent-soft-strong: #ecd2da;
+  --color-on-accent: #ffffff;
+
+  /* Status */
+  --color-success: #2f6b4f;
+  --color-success-soft: #e8f1ec;
+  --color-danger: #b42318;
+  --color-danger-soft: #fbeceb;
+  --color-info: #3d5a73;
+  --color-info-soft: #e9eff4;
+
+  --color-focus-ring: rgb(158 31 69 / 0.38);
+
+  /* Illustrated home ("Living world") */
+  --world-sky-top: #eadcca;
+  --world-sky-bottom: #f8f1e8;
+  --world-ground: #e2d2bc;
+  --world-structure: #463c36;
+  --world-light: #f7d9a8;
+  --world-terracotta: #c4694c;
+  --world-sage: #7f9a7c;
+  --world-ochre: #d7a65a;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: clamp(1.625rem, 1.45rem + 0.8vw, 2rem);
+  --text-3xl: clamp(2rem, 1.6rem + 1.8vw, 2.875rem);
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+  --tracking-tight: -0.022em;
+  --tracking-wide: 0.06em;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Shape and depth */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 2px rgb(31 27 23 / 0.05);
+  --shadow-md: 0 1px 2px rgb(31 27 23 / 0.04), 0 10px 28px -14px rgb(31 27 23 / 0.16);
+  --shadow-lg: 0 2px 6px rgb(31 27 23 / 0.04), 0 28px 64px -24px rgb(31 27 23 / 0.3);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --duration-slow: 380ms;
+
+  /* Layout */
+  --sidebar-width: 256px;
+  --rail-width: 88px;
+  --topbar-height: 60px;
+  --bottom-nav-height: 64px;
+  --content-max-width: 1080px;
+  --control-height: 44px;
+
+  --z-nav: 20;
+  --z-skip-link: 50;
+}

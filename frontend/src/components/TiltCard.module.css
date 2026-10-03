@@ -1,0 +1,35 @@
+.card {
+  --rx: 0deg;
+  --ry: 0deg;
+
+  position: relative;
+  transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));
+  transition:
+    transform var(--duration-slow) var(--ease-out),
+    box-shadow var(--duration-slow) var(--ease-out);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    320px circle at var(--gx, 50%) var(--gy, 0%),
+    rgb(255 255 255 / 0.45),
+    transparent 60%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-slow) var(--ease-out);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transform: none;
+  }
+}

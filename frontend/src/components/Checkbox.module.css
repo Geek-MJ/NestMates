@@ -1,0 +1,92 @@
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+
+.boxWrapper {
+  position: relative;
+  display: grid;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.box {
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-on-accent);
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.check {
+  opacity: 0;
+  scale: 0.6;
+  transition:
+    opacity var(--duration-fast) var(--ease-out),
+    scale var(--duration-base) var(--ease-out);
+}
+
+.option:hover .box {
+  border-color: color-mix(in srgb, var(--color-text) 35%, var(--color-border-strong));
+}
+
+.input:checked + .box {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.input:checked + .box .check {
+  opacity: 1;
+  scale: 1;
+}
+
+.input:focus-visible + .box {
+  box-shadow: 0 0 0 4px var(--color-focus-ring);
+}
+
+.input[aria-invalid="true"] + .box {
+  border-color: var(--color-danger);
+}
+
+.label {
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding-left: calc(22px + var(--space-3));
+  font-size: var(--text-sm);
+  color: var(--color-danger);
+  animation: nm-fade-up var(--duration-base) var(--ease-out) both;
+}
+
+.errorIcon {
+  flex: none;
+  margin-top: 2px;
+}

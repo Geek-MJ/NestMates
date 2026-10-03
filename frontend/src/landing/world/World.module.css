@@ -1,0 +1,175 @@
+/*
+ * Ambient life inside the home. Loops are paused unless the scene that features them is
+ * active (data-scene on an ancestor) or the illustration is marked live (data-live), so the
+ * SVG is not repainted continuously while off-stage.
+ */
+
+.sway,
+.stir,
+.typing,
+.steam,
+.leg,
+.phoneGlow,
+.clouds {
+  animation-play-state: paused;
+  transform-box: fill-box;
+}
+
+.sway {
+  transform-origin: 50% 100%;
+  animation: nm-sway 7s ease-in-out infinite alternate paused;
+}
+
+.stir {
+  animation: nm-stir 1.6s ease-in-out infinite paused;
+}
+
+.typing {
+  animation: nm-typing 0.9s ease-in-out infinite alternate paused;
+}
+
+.steam {
+  animation: nm-steam 2.4s ease-out infinite paused;
+}
+
+.phoneGlow {
+  animation: nm-glow 2.2s ease-in-out infinite alternate paused;
+}
+
+.leg {
+  transform-origin: 50% 0;
+}
+
+.legBack {
+  animation: nm-stride 0.9s ease-in-out infinite alternate paused;
+}
+
+.legFront {
+  animation: nm-stride 0.9s ease-in-out infinite alternate-reverse paused;
+}
+
+.clouds {
+  animation: nm-drift 60s linear infinite alternate paused;
+}
+
+.walker {
+  translate: calc(var(--walk, 0) * -360px) 0;
+}
+
+.door {
+  transform-box: fill-box;
+  transform-origin: 0 50%;
+  scale: calc(1 - var(--door, 0) * 0.82) 1;
+}
+
+:global([data-live="true"]) :is(.sway, .stir, .typing, .steam, .phoneGlow, .leg),
+:global([data-scene="arrival"]) :is(.clouds, .sway),
+:global([data-scene="final"]) .clouds,
+:global([data-scene="people"]) :is(.stir, .steam, .typing, .phoneGlow, .leg),
+:global([data-scene="expenses"]) :is(.stir, .steam),
+:global([data-scene="documents"]) .typing,
+:global([data-scene="tasks"]) .typing,
+:global([data-scene="chat"]) .phoneGlow {
+  animation-play-state: running;
+}
+
+@keyframes nm-sway {
+  from {
+    rotate: -2deg;
+  }
+
+  to {
+    rotate: 2deg;
+  }
+}
+
+@keyframes nm-stir {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  25% {
+    translate: 3px -1px;
+  }
+
+  50% {
+    translate: 0 -2px;
+  }
+
+  75% {
+    translate: -3px -1px;
+  }
+}
+
+@keyframes nm-typing {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: 0 1.5px;
+  }
+}
+
+@keyframes nm-steam {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+
+  40% {
+    opacity: 0.8;
+  }
+
+  to {
+    opacity: 0;
+    translate: 0 -14px;
+  }
+}
+
+@keyframes nm-glow {
+  from {
+    opacity: 0.6;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes nm-stride {
+  from {
+    rotate: -20deg;
+  }
+
+  to {
+    rotate: 20deg;
+  }
+}
+
+@keyframes nm-drift {
+  from {
+    translate: -40px 0;
+  }
+
+  to {
+    translate: 60px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sway,
+  .stir,
+  .typing,
+  .steam,
+  .leg,
+  .phoneGlow,
+  .clouds {
+    animation: none;
+  }
+
+  .walker {
+    translate: none;
+  }
+}

@@ -1,0 +1,133 @@
+.text {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-5);
+  max-width: 30rem;
+}
+
+.text :is(h1, h2):focus {
+  outline: none;
+}
+
+.text :is(h1, h2):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.hero {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.wordmark {
+  font-size: clamp(3rem, 1.6rem + 5.6vw, 6.25rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  color: var(--color-text);
+}
+
+.tagline {
+  font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2.125rem);
+  font-weight: var(--weight-medium);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.lead,
+.body {
+  max-width: 34ch;
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.title {
+  font-size: clamp(2rem, 1.3rem + 2.6vw, 3.5rem);
+  font-weight: var(--weight-semibold);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent);
+}
+
+.kickerIcon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--color-accent-soft);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.hint {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.inlineLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+}
+
+.inlineLink:hover {
+  text-decoration: underline;
+}
+
+.inlineArrow {
+  transition: translate var(--duration-base) var(--ease-out);
+}
+
+.inlineLink:hover .inlineArrow {
+  translate: 3px 0;
+}
+
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.flow li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.flowArrow {
+  color: var(--color-accent);
+}
+
+.pair {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}

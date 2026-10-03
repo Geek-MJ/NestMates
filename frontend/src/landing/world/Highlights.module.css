@@ -1,0 +1,13 @@
+.focus {
+  opacity: var(--v);
+}
+
+.links {
+  --v: var(--vis-final, 0);
+
+  opacity: clamp(0, var(--v) * 3, 1);
+}
+
+.links path {
+  stroke-dashoffset: calc(1 - clamp(0, (var(--v) - 0.15) * 1.6, 1));
+}

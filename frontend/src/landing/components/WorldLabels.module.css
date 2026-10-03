@@ -1,0 +1,62 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.role,
+.beacon {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  box-shadow: 0 10px 24px -14px rgb(46 40 36 / 0.55);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+  transform-origin: 50% 100%;
+  translate: -50% -100%;
+  scale: calc(1 / var(--S, 1));
+}
+
+.role {
+  --v: var(--vis-people, 0);
+  --in: clamp(0, (var(--v) - 0.2) * 2.5, 1);
+
+  padding: 6px var(--space-3);
+  opacity: var(--in);
+  translate: -50% calc(-100% - (1 - var(--in)) * 12px);
+}
+
+.role[data-walking] {
+  margin-left: calc(var(--walk, 0) * -360px);
+}
+
+.roleDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--world-terracotta);
+}
+
+.beacon {
+  --v: var(--vis-final, 0);
+  --in: clamp(0, (var(--v) - 0.25 - var(--i) * 0.06) * 3, 1);
+
+  padding: 6px var(--space-3) 6px 6px;
+  opacity: var(--in);
+  translate: -50% calc(-100% - (1 - var(--in)) * 16px);
+}
+
+.beaconIcon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}

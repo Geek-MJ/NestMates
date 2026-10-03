@@ -1,0 +1,59 @@
+.calendar {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.calendar :global(.fc) {
+  --fc-border-color: var(--color-border);
+  --fc-page-bg-color: transparent;
+  --fc-neutral-bg-color: var(--color-surface-sunken);
+  --fc-list-event-hover-bg-color: var(--color-surface-hover);
+  --fc-today-bg-color: var(--color-accent-soft);
+  --fc-event-bg-color: var(--color-accent);
+  --fc-event-border-color: var(--color-accent);
+  --fc-event-text-color: var(--color-on-accent);
+  --fc-button-bg-color: var(--color-accent);
+  --fc-button-border-color: var(--color-accent);
+  --fc-button-text-color: var(--color-on-accent);
+  --fc-button-hover-bg-color: var(--color-accent-hover);
+  --fc-button-hover-border-color: var(--color-accent-hover);
+  --fc-button-active-bg-color: var(--color-accent-active);
+  --fc-button-active-border-color: var(--color-accent-active);
+  font-family: var(--font-sans);
+  color: var(--color-text);
+}
+
+.calendar :global(.fc .fc-toolbar) {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.calendar :global(.fc .fc-toolbar-title) {
+  font-size: var(--text-lg);
+}
+
+.calendar :global(.fc .fc-button) {
+  border-radius: var(--radius-md);
+  font-weight: var(--weight-semibold);
+}
+
+.calendar :global(.fc .fc-button:focus) {
+  box-shadow: 0 0 0 4px var(--color-focus-ring);
+}
+
+.calendar :global(.fc .fc-daygrid-day-number),
+.calendar :global(.fc .fc-col-header-cell-cushion) {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .calendar :global(.fc .fc-toolbar) {
+    display: grid;
+    justify-items: center;
+  }
+
+  .calendar :global(.fc .fc-daygrid-day-number) {
+    font-size: var(--text-xs);
+  }
+}

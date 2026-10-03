@@ -1,0 +1,544 @@
+{
+  "app": {
+    "name": "NestMates",
+    "tagline": "Shared living, quietly organised.",
+    "pitch": "Expenses, chores, events, documents and conversations — one calm place for everyone in the flat, in French and English."
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "loading": "Loading…",
+    "close": "Close",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "opensNewTab": "opens in a new tab"
+  },
+  "language": {
+    "label": "Language",
+    "names": {
+      "fr": "Français",
+      "en": "English"
+    }
+  },
+  "nav": {
+    "primary": "Main navigation",
+    "account": "Account",
+    "expenses": "Expenses",
+    "calendar": "Calendar",
+    "documents": "Documents",
+    "tasks": "To-do list",
+    "tasksShort": "Tasks",
+    "chat": "Chat",
+    "household": "Household",
+    "profile": "Profile",
+    "onboarding": "Get started",
+    "logout": "Log out"
+  },
+  "common": {
+    "retry": "Try again",
+    "backToHome": "Back to NestMates",
+    "reload": "Reload the page",
+    "cancel": "Cancel",
+    "formerMember": "Former member",
+    "loadMore": "Load more"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "email": "Enter a valid email address, for example name@example.com.",
+    "passwordRules": "Use at least 8 characters, including at least one letter and one digit.",
+    "privacyRequired": "Accept the privacy policy to create your account.",
+    "invitationCode": "An invitation code has exactly 8 letters or digits.",
+    "codes": {
+      "REQUIRED": "This field is required.",
+      "INVALID_TYPE": "This value isn't valid.",
+      "TOO_LONG": "This is too long.",
+      "INVALID_FORMAT": "This value isn't in the expected format.",
+      "NOT_POSITIVE": "Enter an amount greater than zero, with at most two decimals.",
+      "OUT_OF_RANGE": "This amount is too large.",
+      "NOT_MEMBER": "Choose someone who is currently in the household.",
+      "DUPLICATE": "Each person can only be selected once."
+    }
+  },
+  "errors": {
+    "NETWORK_ERROR": "We couldn't reach NestMates. Check your internet connection and try again.",
+    "TIMEOUT": "NestMates took too long to respond. Please try again.",
+    "SERVICE_UNAVAILABLE": "NestMates can't be reached right now. Please try again in a few moments.",
+    "VALIDATION_ERROR": "Some information is invalid. Check the fields and try again.",
+    "UNAUTHENTICATED": "Your session has expired. Please log in again.",
+    "FORBIDDEN": "You don't have access to this household.",
+    "NOT_FOUND": "We couldn't find what you were looking for.",
+    "CONFLICT": "This action isn't possible right now. Refresh the page and try again.",
+    "RATE_LIMITED": "Too many attempts. Please wait a few minutes and try again.",
+    "PAYLOAD_TOO_LARGE": "This request is too large to be sent.",
+    "UNSUPPORTED_MEDIA_TYPE": "This file type isn't supported. Use a PDF, JPEG or PNG.",
+    "INTERNAL_ERROR": "Something went wrong on our side. Please try again in a moment.",
+    "UNKNOWN": "Something unexpected happened. Please try again."
+  },
+  "session": {
+    "restoring": "Opening your space…",
+    "errorTitle": "We couldn't open your session",
+    "logout": "Log out"
+  },
+  "auth": {
+    "email": "Email address",
+    "password": "Password",
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Log in to your household.",
+      "submit": "Log in",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "New to NestMates?",
+      "createAccount": "Create an account",
+      "invalidCredentials": "The email address or password is incorrect. Check them and try again.",
+      "sessionExpired": "Your session has expired. Please log in again."
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Set up your space in under a minute.",
+      "name": "Name",
+      "passwordHint": "At least 8 characters, including a letter and a digit.",
+      "acceptPrivacy": "I have read and accept the privacy policy, including the automatic translation of chat messages by Google Cloud Translation.",
+      "googleTermsLead": "Automatic translation is provided by Google Cloud Translation.",
+      "googleTermsLink": "Google Terms of Service",
+      "submit": "Create account",
+      "haveAccount": "Already have an account?",
+      "login": "Log in",
+      "emailTaken": "An account already uses this email address. Log in, or use another address."
+    },
+    "forgot": {
+      "title": "Reset your password",
+      "subtitle": "Enter your email address and we'll send you a link to choose a new password.",
+      "submit": "Send reset link",
+      "sentTitle": "Check your inbox",
+      "sentMessage": "If an account exists for {{email}}, we've sent a reset link. It stays valid for 1 hour.",
+      "backToLogin": "Back to log in"
+    },
+    "reset": {
+      "title": "Choose a new password",
+      "subtitle": "Your new password replaces the old one immediately.",
+      "newPassword": "New password",
+      "submit": "Update password",
+      "successTitle": "Password updated",
+      "successMessage": "You can now log in with your new password.",
+      "goToLogin": "Go to log in",
+      "missingTokenTitle": "This link is incomplete",
+      "missingTokenMessage": "Open the link from the reset email again, or request a new one.",
+      "requestNewLink": "Request a new link"
+    }
+  },
+  "onboarding": {
+    "title": "Set up your household",
+    "subtitle": "Create a household for your flat, or join your flatmates with their invitation code.",
+    "create": {
+      "title": "Create a household",
+      "description": "You'll get an invitation code to share with your flatmates.",
+      "name": "Household name",
+      "submit": "Create household",
+      "alreadyMember": "You already belong to a household."
+    },
+    "join": {
+      "title": "Join a household",
+      "description": "Ask a flatmate for the 8-character code shown in their household settings.",
+      "code": "Invitation code",
+      "submit": "Join household",
+      "invalidCode": "This invitation code doesn't match any household. Check it and try again.",
+      "alreadyMember": "You already belong to a household. Leave it before joining another one."
+    }
+  },
+  "pages": {
+    "expenses": {
+      "title": "Expenses",
+      "description": "Who paid what, and who owes whom."
+    },
+    "calendar": {
+      "title": "Calendar",
+      "description": "Guests, repairs, parties and due dates for the whole flat."
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Lease, bills, inventory and insurance, in one shared place."
+    },
+    "tasks": {
+      "title": "To-do list",
+      "description": "Household tasks, who they're assigned to and when they're due."
+    },
+    "chat": {
+      "title": "Chat",
+      "description": "Talk with your flatmates — each message in your language."
+    },
+    "household": {
+      "title": "Household",
+      "description": "Members, invitation code and leaving the household."
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Your name, email, password and language."
+    }
+  },
+  "householdSettings": {
+    "loading": "Opening your household…",
+    "errorTitle": "We couldn't open your household",
+    "nameLabel": "Household name",
+    "empty": {
+      "title": "You're not part of a household",
+      "description": "Create a household for your flat, or join your flatmates with their invitation code."
+    },
+    "invitation": {
+      "label": "Invitation code",
+      "copy": "Copy",
+      "copied": "Copied",
+      "copyFailed": "Copy failed",
+      "hint": "Share this code with your flatmates."
+    },
+    "members": {
+      "title": "Household members",
+      "you": "You",
+      "empty": "This household has no members."
+    },
+    "leave": {
+      "title": "Leave household",
+      "action": "Leave household",
+      "hint": "You can leave when your balance is settled: you don't owe anyone, and nobody owes you.",
+      "blocked": "These amounts still have to be settled before you can leave.",
+      "debt": "{{from}} owes {{to}} {{amount}}",
+      "confirmTitle": "Leave this household?",
+      "confirmBody": "You will lose access to its expenses, calendar, documents, tasks and chat. If you are the last member, the household and all of its data are deleted."
+    }
+  },
+  "profileSettings": {
+    "details": {
+      "title": "Your details",
+      "submit": "Save changes",
+      "success": "Profile updated",
+      "emailTaken": "An account already uses this email address."
+    },
+    "language": {
+      "title": "Language",
+      "description": "This choice applies to the whole application straight away and is saved to your account.",
+      "success": "Language updated"
+    },
+    "password": {
+      "title": "Password",
+      "current": "Current password",
+      "submit": "Update password",
+      "success": "Password updated",
+      "incorrect": "The current password is incorrect."
+    },
+    "delete": {
+      "title": "Delete account",
+      "description": "This permanently deletes your account and personal data.",
+      "action": "Delete my account",
+      "confirmTitle": "Delete your account?",
+      "confirmBody": "Your account and personal data will be deleted. This can't be undone.",
+      "confirm": "Delete my account",
+      "cancel": "Cancel",
+      "inHousehold": "You can delete your account only after you leave your household. Open Household settings and leave once your balance is settled."
+    }
+  },
+  "expensesPage": {
+    "loading": "Opening expenses…",
+    "errorTitle": "We couldn't open the expenses",
+    "add": {
+      "open": "Add expense",
+      "title": "Add expense",
+      "description": "The amount is split equally between the people you select.",
+      "amount": "Amount",
+      "amountHint": "In euros, for example 12.50.",
+      "payer": "Paid by",
+      "date": "Date",
+      "category": "Category",
+      "descriptionLabel": "Description",
+      "participants": "Participants",
+      "submit": "Save expense",
+      "success": "Expense saved. The balances are updated."
+    },
+    "categories": {
+      "rent": "Rent",
+      "groceries": "Groceries",
+      "bills": "Bills",
+      "household": "Household",
+      "transport": "Transport",
+      "leisure": "Leisure",
+      "other": "Other"
+    },
+    "balances": {
+      "title": "Balances",
+      "empty": "There are no balances yet.",
+      "hint": "A positive balance is money the household owes this person. A negative balance is money they owe."
+    },
+    "debts": {
+      "title": "Who owes whom",
+      "empty": "Nobody owes anyone right now.",
+      "line": "{{from}} owes {{to}} {{amount}}"
+    },
+    "settle": {
+      "action": "Mark as settled",
+      "success": "Settlement recorded. The balances are updated.",
+      "confirmTitle": "Mark this debt as settled?",
+      "confirmBody": "{{from}} pays {{to}} the full {{amount}} outside NestMates. This records that the debt is settled."
+    },
+    "history": {
+      "title": "History",
+      "expenses": "Expenses",
+      "settlements": "Settlements",
+      "empty": "No expenses or settlements yet.",
+      "noExpenses": "No expenses on this page.",
+      "noSettlements": "No settlements on this page.",
+      "paidBy": "Paid by {{name}} · {{date}}",
+      "settledLine": "{{from}} settled with {{to}}"
+    }
+  },
+  "calendarPage": {
+    "loading": "Opening the calendar…",
+    "errorTitle": "We couldn't open the calendar",
+    "month": "Month",
+    "empty": "Nothing is planned this month.",
+    "add": "Add event",
+    "addTitle": "Add event",
+    "edit": "Edit",
+    "editTitle": "Edit event",
+    "save": "Save event",
+    "delete": "Delete event",
+    "deleteTitle": "Delete this event?",
+    "deleteBody": "The event will disappear for everyone in the household.",
+    "created": "Event added.",
+    "updated": "Event updated.",
+    "deleted": "Event deleted.",
+    "fields": {
+      "title": "Title",
+      "date": "Date",
+      "time": "Time",
+      "timeHint": "Optional.",
+      "description": "Description"
+    }
+  },
+  "documentsPage": {
+    "loading": "Opening documents…",
+    "errorTitle": "We couldn't open the documents",
+    "upload": "Upload",
+    "hint": "PDF, JPEG or PNG, up to 10 MB.",
+    "uploaded": "Document uploaded.",
+    "tooLarge": "This file is larger than 10 MB.",
+    "unsupported": "Use a PDF, JPEG or PNG file.",
+    "popupBlocked": "The browser blocked the new tab. Allow pop-ups for NestMates, or download the file instead.",
+    "deleted": "Document deleted.",
+    "emptyTitle": "No documents yet",
+    "empty": "Upload the lease, a bill or another file the household needs.",
+    "listTitle": "Household documents",
+    "view": "View",
+    "download": "Download",
+    "delete": "Delete",
+    "deleteTitle": "Delete this document?",
+    "deleteBody": "{{name}} will be removed for everyone in the household.",
+    "types": {
+      "pdf": "PDF",
+      "jpeg": "JPEG",
+      "png": "PNG",
+      "other": "File"
+    }
+  },
+  "tasksPage": {
+    "loading": "Opening the to-do list…",
+    "errorTitle": "We couldn't open the to-do list",
+    "add": "Add task",
+    "addTitle": "Add task",
+    "submit": "Save task",
+    "created": "Task added.",
+    "completed": "Task marked as done.",
+    "emptyTitle": "No tasks yet",
+    "empty": "Add a chore, choose who does it and set a due date.",
+    "listTitle": "Household tasks",
+    "meta": "{{assignee}} · due {{date}} · {{status}}",
+    "status": {
+      "TODO": "To do",
+      "DONE": "Done"
+    },
+    "fields": {
+      "title": "Title",
+      "assignee": "Assigned to",
+      "dueDate": "Due date"
+    }
+  },
+  "chatPage": {
+    "loading": "Opening the chat…",
+    "errorTitle": "We couldn't open the chat",
+    "history": "Messages",
+    "empty": "No messages yet. Say hello to your flatmates.",
+    "loadOlder": "Load older messages",
+    "messageLabel": "Message",
+    "placeholder": "Write a message",
+    "send": "Send",
+    "translateTo": {
+      "fr": "Translate to French",
+      "en": "Translate to English"
+    },
+    "seeOriginal": "See original",
+    "translating": "Translating…",
+    "translationUnavailable": "Translation unavailable. Please try again.",
+    "retry": "Try again",
+    "typing": "{{name}} is typing…",
+    "rateLimit": "You're sending messages too quickly. Wait a few seconds and try again."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "This page doesn't exist or has moved."
+  },
+  "routeError": {
+    "title": "Something went wrong",
+    "message": "An unexpected error stopped this page from loading. Reload the page to try again."
+  },
+  "landing": {
+    "title": "Living together, made simpler",
+    "chapters": "Story chapters",
+    "header": {
+      "label": "Account",
+      "login": "Log in",
+      "getStarted": "Get started"
+    },
+    "footer": {
+      "label": "Footer links",
+      "tagline": "Shared expenses, calendar, documents, chores and chat for the people you live with — in French and English.",
+      "login": "Log in",
+      "register": "Create an account"
+    },
+    "scenes": {
+      "arrival": {
+        "label": "Welcome",
+        "tagline": "Living together, made simpler.",
+        "lead": "Shared expenses, a common calendar, important documents, chores and a household chat that translates between French and English — in one calm place.",
+        "cta": "Get started",
+        "explore": "Explore"
+      },
+      "enter": {
+        "label": "The home",
+        "title": "One home. Different lives.",
+        "body": "Everything your household needs, in one place."
+      },
+      "people": {
+        "label": "People",
+        "title": "Everyone has their own life.",
+        "body": "NestMates keeps the household connected.",
+        "roles": {
+          "cooking": "Cooking",
+          "working": "Working",
+          "relaxing": "Relaxing",
+          "groceries": "Bringing groceries"
+        }
+      },
+      "expenses": {
+        "label": "Expenses",
+        "kicker": "Shared expenses",
+        "title": "Know who paid. Know what is shared.",
+        "body": "Keep things simple: record an expense, let NestMates calculate each share, then settle up."
+      },
+      "calendar": {
+        "label": "Calendar",
+        "kicker": "Shared calendar",
+        "title": "Know what’s happening.",
+        "body": "Dinners, visits and household plans on one calendar that everyone can see."
+      },
+      "documents": {
+        "label": "Documents",
+        "kicker": "Documents",
+        "title": "Keep the important things where everyone can find them.",
+        "body": "The lease, the insurance and household papers, stored together for the whole home."
+      },
+      "tasks": {
+        "label": "Tasks",
+        "kicker": "To-do list",
+        "title": "Share the responsibilities.",
+        "body": "Add chores, take them on and mark them done. Everyone can see what is left."
+      },
+      "chat": {
+        "label": "Chat",
+        "kicker": "Household chat",
+        "title": "Write in your language. Everyone follows.",
+        "body": "Messages can be translated between French and English, and the original always stays alongside.",
+        "pair": "French ↔ English"
+      },
+      "final": {
+        "label": "Together",
+        "tagline": "One home. Everything in sync.",
+        "body": "Create your household and invite the people you live with, or join one with an invitation code.",
+        "create": "Create your household",
+        "join": "Join a household",
+        "joinHint": "Have an invitation code? Create your account first, then enter the code.",
+        "login": "Already have an account? Log in"
+      }
+    },
+    "illustrations": {
+      "expenses": {
+        "title": "Shared expenses",
+        "caption": "An expense is recorded, split equally between three people, then settled.",
+        "steps": {
+          "record": "Record",
+          "calculate": "Calculate",
+          "settle": "Settle"
+        },
+        "item": "Groceries",
+        "paidBy": "Paid by one housemate",
+        "split": "Split between {{count}} people",
+        "settled": "Settled"
+      },
+      "calendar": {
+        "title": "Calendar",
+        "caption": "A day is selected in the household calendar and its event is shown.",
+        "event": "Household dinner",
+        "place": "Kitchen"
+      },
+      "documents": {
+        "title": "Documents",
+        "caption": "Lease, insurance and household documents are sorted side by side.",
+        "lease": "Lease",
+        "insurance": "Insurance",
+        "household": "Household",
+        "type": "PDF",
+        "shared": "Shared with the household"
+      },
+      "tasks": {
+        "title": "To-do list",
+        "caption": "A task moves from To do to Done and is checked off.",
+        "todo": "To do",
+        "done": "Done",
+        "items": {
+          "kitchen": "Clean the kitchen",
+          "recycling": "Take out the recycling",
+          "laundry": "Fold the laundry",
+          "plants": "Water the plants"
+        }
+      },
+      "chat": {
+        "title": "Household chat",
+        "caption": "A message written in English is shown with its French translation, and a reply written in French with its English translation.",
+        "languages": "FR ↔ EN",
+        "question": "Can someone buy milk?",
+        "reply": "Yes, I’ll take care of it!",
+        "translatedFrom": {
+          "en": "Translated from English",
+          "fr": "Translated from French"
+        }
+      }
+    }
+  },
+  "authScene": {
+    "login": {
+      "title": "Welcome back.",
+      "body": "The door is open. Log in to rejoin your household."
+    },
+    "register": {
+      "title": "Your new home starts here.",
+      "body": "Create your account, then set up your household or join one with an invitation code."
+    },
+    "forgot": {
+      "title": "Lost your key?",
+      "body": "It happens. We’ll email you a link to get back in."
+    },
+    "reset": {
+      "title": "A new key for your home.",
+      "body": "Choose a new password to unlock your account."
+    }
+  },
+  "onboardingHero": {
+    "eyebrow": "Welcome home",
+    "or": "or"
+  }
+}
