@@ -2,6 +2,10 @@
 
 NestMates is a bilingual household management application developed as a Software Engineering project at ESILV. It is for people who share a home. Expenses, a calendar, documents, tasks and chat live in the same application, with a French and English interface.
 
+## Demo
+
+https://github.com/user-attachments/assets/368dc7d7-fdf2-405f-97aa-33f0bcb56c76
+
 ## Project Context
 
 The project was written by the group ESILV-4-A4-PAR-ST-CDOF2, with Professor RIAHI Kenza. The course documents in this repository are `NestMates_BRD.docx`, `NestMates_SRS.docx` and `NestMates_SDD.docx`.
@@ -158,16 +162,7 @@ Documents are uploaded with Multer, checked as PDF, JPEG or PNG, and written to 
 
 Passwords are hashed with bcrypt at cost 12. Access tokens are JWTs signed with HS256. `/api/auth` is rate limited. Helmet is enabled, and CORS allows only `FRONTEND_ORIGIN`. Socket.IO rejects a connection without a valid token. Document content requires household membership. Uploads are limited to 10 MB and to PDF, JPEG and PNG, including a check of the file header. Chat sending is limited to 10 messages per user per 10 seconds. The Google API key is read from the server environment.
 
-## Contributors
-
-Landzi123
-
-ShayKrm
 
 ## Academic Context
 
 ESILV Software Engineering project. Group ESILV-4-A4-PAR-ST-CDOF2. Professor RIAHI Kenza.
-
-## License
-
-This repository does not include a license file.
