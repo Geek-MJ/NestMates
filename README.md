@@ -1,6 +1,6 @@
 # NestMates
 
-LINK: https://nest-mates.vercel.app/
+### LINK: https://nest-mates.vercel.app/
 NestMates is a bilingual household management application developed as a Software Engineering project at ESILV. It is for people who share a home. Expenses, a calendar, documents, tasks and chat live in the same application, with a French and English interface.
 
 ## Demo
